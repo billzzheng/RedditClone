@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".Fragments.LoginFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -18,26 +18,15 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/login_welcome"
             android:id="@+id/tv_title_fragment_login"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_gravity="center_horizontal"
-            android:hint="@string/username"
-            android:id="@+id/et_username_fragment_login"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_gravity="center_horizontal"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:id="@+id/et_password_fragment_login"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:id="@+id/btn_login_fragment_login"
             android:text="Button to Login"/>
+        <WebView
+            android:id="@+id/webview_fragment_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </FrameLayout>
