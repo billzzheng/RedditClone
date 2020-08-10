@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
             }
 
             // Create a new Fragment to be placed in the activity layout
-            LoginFragment firstFragment = new LoginFragment();
+            PostsFragment firstFragment = new PostsFragment();
 
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()

@@ -132,23 +132,4 @@ public class LoginFragment extends Fragment {
             listener.onLogin();
         }
     }
-
-    /*private static final class GetSubredditPostsTask extends AsyncTask<RedditClient, Void, Listing<Submission>> {
-        @Override
-        protected Listing<Submission> doInBackground(RedditClient... redditClients) {
-            DefaultPaginator.Builder<Submission, SubredditSort> paginatorBuilder = redditClients[0].subreddit("playboicarti").posts();
-            DefaultPaginator<Submission> paginator = paginatorBuilder.build();
-
-            Listing<Submission> firstPage = paginator.next();
-            return firstPage;
-        }
-
-        @Override
-        protected void onPostExecute(Listing<Submission> posts) {
-            for(int i = 0; i < posts.size(); i++) {
-                String title = posts.get(i).getTitle();
-                Log.d("billz", title);
-            }
-        }
-    }*/
 }
