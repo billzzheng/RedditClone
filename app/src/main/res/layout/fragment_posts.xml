@@ -1,38 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_fragment_posts"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:id="@+id/info_layout_fragment_posts"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/subreddit"
-                android:id="@+id/et_subreddit_fragment_posts"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/btn_load_posts_fragment_posts"
-                android:text="Load Posts"/>
-        </LinearLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_posts_list_fragment_posts"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
-</FrameLayout>
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:id="@+id/info_layout_fragment_posts"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/subreddit"
+                    android:id="@+id/et_subreddit_fragment_posts"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/btn_load_posts_fragment_posts"
+                    android:text="Load Posts"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_posts_list_fragment_posts"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_fragment_posts"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+    </FrameLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+</androidx.drawerlayout.widget.DrawerLayout>
